@@ -17,6 +17,10 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
+		<?php
+			echo "Your name is " . $_POST["name"];
+		?>
+
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
 		Name: <input type="text" name="name"><br>
 		<input type="submit">
