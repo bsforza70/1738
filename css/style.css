@@ -19,3 +19,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#submit {
+	background: #FFF0A5;
+    width: 30vw;
+    color: #8E2800;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 2px;
+    -webkit-appearance: none;
+}

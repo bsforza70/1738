@@ -47,7 +47,7 @@
 			  <option value="Charlie">Charlie</option>
 			  <option value="Josh">Josh</option>
 			</select>
-		<input type="submit">
+		<input id="submit" value="go" type="submit">
 		</form>
 		</div>
 	</body>
