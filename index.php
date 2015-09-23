@@ -24,7 +24,7 @@
 		?>
 
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
-			<select name="name">
+			<select id="name" name="name">
 			  <option value="Bob">Bob</option>
 			  <option value="Michel">Michel</option>
 			  <option value="Amir">Amir</option>
