@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'> -->
 		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/particles.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
