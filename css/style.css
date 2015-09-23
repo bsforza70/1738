@@ -2,28 +2,16 @@ body {
 	background-color: #B64926;
 }
 #name {
-/*   margin: 50px;
-    border: 1px solid #111;
-   background: transparent;
-   width: 150px;
-   padding: 5px 35px 5px 5px;
-   font-size: 16px;
-   border: 1px solid #ccc;
-   height: 34px;
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-    background: no-repeat #eee;*/
-    background: transparent;
-   width: 268px;
-   padding: 5px;
-   font-size: 16px;
-   line-height: 1;
-   border: 0;
-   border-radius: 0;
-   height: 34px;
-   -webkit-appearance: none;
-   }
+	background: #FFF0A5;
+    width: 30vw;
+    color: #8E2800;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 2px;
+    -webkit-appearance: none;
 } 
 form {
 	top: 50%;
