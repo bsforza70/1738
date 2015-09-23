@@ -23,6 +23,7 @@
 			}
 		?>
 
+		<div id="container">
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
 			  <option value="Bob">Bob</option>
@@ -48,5 +49,6 @@
 			</select>
 		<input type="submit">
 		</form>
+		</div>
 	</body>
 </html>
