@@ -18,7 +18,9 @@
 	</head>
 	<body>
 		<?php
-			echo "Your name is " . $_POST["name"];
+			if ($_POST["name"] != "") { 
+				echo "Your name is " . $_POST["name"];
+			}
 		?>
 
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
