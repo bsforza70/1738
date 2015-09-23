@@ -24,7 +24,28 @@
 		?>
 
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
-		Name: <input type="text" name="name"><br>
+			<select name="name">
+			  <option value="Bob">Bob</option>
+			  <option value="Michel">Michel</option>
+			  <option value="Amir">Amir</option>
+			  <option value="Ehan">Ehan</option>
+			  <option value="Jackson">Jackson</option>
+			  <option value="Megan">Megan</option>
+			  <option value="Matt">Matt</option>
+			  <option value="Blake">Blake</option>
+			  <option value="August">August</option>
+			  <option value="Kendall">Kendall</option>
+			  <option value="Justin">Justin</option>
+			  <option value="Julian">Julian</option>
+			  <option value="Kristin">Kristin</option>
+			  <option value="Sophia">Sophia</option>
+			  <option value="Clayton">Clayton</option>
+			  <option value="Sophie">Sophie</option>
+			  <option value="DeRon">Deron</option>
+			  <option value="Wilson">Wilson</option>
+			  <option value="Charlie">Charlie</option>
+			  <option value="Josh">Josh</option>
+			</select>
 		<input type="submit">
 		</form>
 	</body>
