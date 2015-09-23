@@ -1,3 +1,3 @@
 <?php
-	echo "YOU FKIN WAT M8";
+	echo "Your name is" . $_POST["name"];
 ?>
