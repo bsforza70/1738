@@ -23,7 +23,7 @@
 				echo "Your name is " . $_POST["name"];
 			}
 		?>
-
+		<div id="wrap">
 		<div id="container">
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
@@ -50,6 +50,7 @@
 			</select>
 		<input id="submit" value="go" type="submit">
 		</form>
+		</div>
 		</div>
 	</body>
 </html>
