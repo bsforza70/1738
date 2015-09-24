@@ -23,6 +23,8 @@
 
 			$text = explode("\n", $text);
 			echo $text;
+			echo $text[0];
+			echo $text[1];
  
 		?>
 
