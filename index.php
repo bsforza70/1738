@@ -27,26 +27,26 @@
 		<div id="container">
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
-			  <option value="Bob">Bob</option>
-			  <option value="Michel">Michel</option>
-			  <option value="Amir">Amir</option>
-			  <option value="Ehan">Ehan</option>
-			  <option value="Jackson">Jackson</option>
-			  <option value="Megan">Megan</option>
-			  <option value="Matt">Matt</option>
-			  <option value="Blake">Blake</option>
-			  <option value="August">August</option>
-			  <option value="Kendall">Kendall</option>
-			  <option value="Justin">Justin</option>
-			  <option value="Julian">Julian</option>
-			  <option value="Kristin">Kristin</option>
-			  <option value="Sophia">Sophia</option>
-			  <option value="Clayton">Clayton</option>
-			  <option value="Sophie">Sophie</option>
-			  <option value="DeRon">Deron</option>
-			  <option value="Wilson">Wilson</option>
-			  <option value="Charlie">Charlie</option>
-			  <option value="Josh">Josh</option>
+				<option value="Amir">Amir</option>
+				<option value="August">August</option>
+				<option value="Blake">Blake</option>
+				<option value="Bob">Bob</option>
+				<option value="Charlie">Charlie</option>
+				<option value="Clayton">Clayton</option>
+				<option value="DeRon">Deron</option>
+				<option value="Ehan">Ehan</option>
+				<option value="Jackson">Jackson</option>
+				<option value="Josh">Josh</option>
+				<option value="Julian">Julian</option>
+				<option value="Justin">Justin</option>
+				<option value="Kendall">Kendall</option>
+				<option value="Kristin">Kristin</option>
+				<option value="Matt">Matt</option>
+				<option value="Megan">Megan</option>
+				<option value="Michel">Michel</option>
+				<option value="Sophia">Sophia</option>
+				<option value="Sophie">Sophie</option>
+				<option value="Wilson">Wilson</option>
 			</select>
 		<input id="submit" value="go" type="submit">
 		</form>
