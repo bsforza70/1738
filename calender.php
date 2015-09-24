@@ -38,7 +38,8 @@
  				$x = $x + 1;
  			}
 
- 			echo json_encode($lunchable);
+ 			echo $lunchable;
+ 			echo $lunchable[0];
 		?>
 
 	</body>
