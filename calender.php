@@ -27,7 +27,7 @@
  			$lunch = substr($lunch, 5, $birthpos);
 
  			$lunch2 = explode($lunch, "│");
- 			echo $lunch2[0]
+ 			echo $lunch2[0];
  			echo $lunch;
 		?>
 
