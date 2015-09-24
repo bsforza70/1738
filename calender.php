@@ -20,9 +20,13 @@
 			$pdf    = $parser->parseFile('cal.pdf');
 			 
 			$text = $pdf->getText();
+
+			$text = explode("\n", $text);
 			echo $text;
  
 		?>
 
 	</body>
 </html>
+
+
