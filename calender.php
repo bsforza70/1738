@@ -23,7 +23,7 @@
 
 			$lunchpos = strpos($text, "LUNCH");			
  			$lunch = substr($text, $lunchpos);
- 			$birthpos = strpos($lunch, "Happy Birthday") - 8;
+ 			$birthpos = strpos($lunch, "Happy Birthday") - 9;
  			$lunch = substr($lunch, 9, $birthpos);
 
  			$lunch2 = explode("│", $lunch);
