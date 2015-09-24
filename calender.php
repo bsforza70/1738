@@ -32,11 +32,7 @@
  			echo count($lunch2);
  			$lunchable = [];
 
-  			$x = 0;
- 			while($x < count($lunch2)) {
- 				$lunchable[] = 'lunchItem'.$x => $lunch2[$x];
- 				$x = $x + 1;
- 			}
+  			$lunchable[] = $lunch2[0];
 
  			echo $lunchable;
  			echo $lunchable[0];
