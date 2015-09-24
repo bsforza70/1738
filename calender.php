@@ -30,16 +30,16 @@
 
  			echo $lunch2;
  			echo count($lunch2);
- 			// $lunchable = array();
+ 			$lunchable = [];
 
-  		// 	$x = 0;
- 			// while($x < count($lunch2)) {
- 			// 	array_push($lunchable, 'lunchItem'.$x => $lunch2[$x]);
- 			// 	$x = $x + 1;
- 			// }
+  			$x = 0;
+ 			while($x < count($lunch2)) {
+ 				$lunchable[] = 'lunchItem'.$x => $lunch2[$x];
+ 				$x = $x + 1;
+ 			}
 
- 			// echo $lunchable;
- 			// echo $lunchable[0];
+ 			echo $lunchable;
+ 			echo $lunchable[0];
 		?>
 
 	</body>
