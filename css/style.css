@@ -62,3 +62,9 @@ body {
 	width: 100%;
 	position: fixed;
 }
+
+@media (max-width: 1013px) {
+	#name, #inout, #submit {
+		width: 80vw;
+	}
+}
