@@ -21,10 +21,10 @@
 			 
 			$text = $pdf->getText();
 
-			$lunchpos = strpos($text, "LUNCH");
-			$birthpos = strpos($text, "Happy Birthday");
-			
+			$lunchpos = strpos($text, "LUNCH");			
  			$lunch = substr($text, $lunchpos);
+ 			$birthpos = strpos($lunch, "Happy Birthday";
+ 			$lunch = substr($lunch, $birthpos);
  			echo $lunch;
 		?>
 
