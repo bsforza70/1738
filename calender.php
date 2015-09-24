@@ -28,13 +28,7 @@
 
  			$lunch2 = explode("│", $lunch);
 
- 			$lunchable = [];
-
-  			$lunchable[] = $lunch2[0];
-
- 			echo $lunchable[0];
-
- 			echo json_encode($lunchable[0]);
+ 			echo json_encode($lunch2);
 		?>
 
 	</body>
