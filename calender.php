@@ -21,9 +21,7 @@
 			 
 			$text = $pdf->getText();
 
-			$text = explode("\n", $text);
-			echo $text;
-			echo $text[0];
+			$text = explode("LUNCH:", $text);
 			echo $text[1];
  
 		?>
