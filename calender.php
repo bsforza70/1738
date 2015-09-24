@@ -30,9 +30,11 @@
 
  			$lunchable = [];
 
-  			$lunchable[] = 'LunchItem1' => $lunch2[0];
+  			$lunchable[] = $lunch2[0];
 
  			echo $lunchable[0];
+
+ 			echo json_encode($lunchable[0]);
 		?>
 
 	</body>
