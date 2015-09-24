@@ -21,9 +21,12 @@
 			 
 			$text = $pdf->getText();
 
-			$text = explode("LUNCH:", $text);
-			echo $text[1];
- 
+			$lunchpos = strpos($text, "LUNCH:");
+			$birthpos = strpos($text, "Happy Birthday");
+			
+ 			$lunch = substr($text, $lunchpos, $birthpos);
+
+ 			echo $lunch;
 		?>
 
 	</body>
