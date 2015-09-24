@@ -28,7 +28,12 @@
 
  			$lunch2 = explode("│", $lunch);
 
- 			echo "Lunch Api?";
+ 			$x = 0;
+
+ 			while($x < count($lunch2)){
+ 				echo $lunch2[$x]."\r\n";
+ 				$x = $x + 1;
+ 			}
 		?>
 
 	</body>
