@@ -24,6 +24,10 @@ body {
     -webkit-appearance: none;
 }
 
+#name {
+	cursor: pointer;
+}
+
 #container {
 	position: absolute;
 	top: 50%;
@@ -33,7 +37,6 @@ body {
 
 #submit {
 	background: #FFF0A5;
-
     color: #8E2800;
     font-weight: 600;
     padding: 20px;
@@ -42,6 +45,12 @@ body {
     border: 0;
     border-radius: 2px;
     -webkit-appearance: none;
+}
+
+#submit:hover {
+	cursor: pointer;
+	background: #FFF088;
+	transition: all 0.2s ease;
 }
 
 #wrap {
