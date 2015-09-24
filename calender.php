@@ -34,8 +34,7 @@
  			// }
  			// echo $lunch;
 
- 			echo json_encode($lunch2);
- 			echo $lunch2:
+ 			echo $lunch2;
 		?>
 
 	</body>
