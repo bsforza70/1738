@@ -27,11 +27,7 @@
  			$lunch = substr($lunch, 5, $birthpos);
 
  			$lunch2 = explode($lunch, "│");
- 			$x = 0;
- 			while($x < count($lunch2)) {
- 				echo $lunch2[$x];
- 				$x = $x + 1;
- 			}
+ 			echo $lunch2[0]
  			echo $lunch;
 		?>
 
