@@ -27,14 +27,18 @@
  			$lunch = substr($lunch, 6, $birthpos);
 
  			$lunch2 = explode("│", $lunch);
-  		// 	$x = 0;
- 			// while($x < count($lunch2)) {
- 			// 	echo $lunch2[$x];
- 			// 	$x = $x + 1;
- 			// }
- 			// echo $lunch;
 
  			echo $lunch2;
+ 			echo count($lunch2);
+ 			$lunchable = array();
+
+  			$x = 0;
+ 			while($x < count($lunch2)) {
+ 				array_push($lunchable, 'lunchItem'.$x => $lunch2[$x]);
+ 				$x = $x + 1;
+ 			}
+
+ 			echo json_encode($lunchable);
 		?>
 
 	</body>
