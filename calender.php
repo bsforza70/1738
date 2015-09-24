@@ -28,7 +28,7 @@
 
  			$lunch2 = explode("│", $lunch);
 
- 			echo json_encode($lunch2[0]);
+ 			echo "Lunch Api?;
 		?>
 
 	</body>
