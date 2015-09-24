@@ -28,7 +28,7 @@
 
  			$lunch2 = explode("│", $lunch);
 
- 			echo "Lunch Api?;
+ 			echo "Lunch Api?";
 		?>
 
 	</body>
