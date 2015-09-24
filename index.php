@@ -27,6 +27,7 @@
 		<div id="container">
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
+				<option selected disabled value="Name">Name</option>
 				<option value="Amir">Amir</option>
 				<option value="August">August</option>
 				<option value="Blake">Blake</option>
@@ -47,6 +48,11 @@
 				<option value="Sophia">Sophia</option>
 				<option value="Sophie">Sophie</option>
 				<option value="Wilson">Wilson</option>
+			</select>
+			<select id="inout" name="inout">
+				<option selected disabled value="inout">in / out</option>
+				<option value="in">in</option>
+				<option value="out">out</option>
 			</select>
 		<input id="submit" value="go" type="submit">
 		</form>
