@@ -28,13 +28,10 @@
 
  			$lunch2 = explode("│", $lunch);
 
- 			echo $lunch2;
- 			echo count($lunch2);
  			$lunchable = [];
 
-  			$lunchable[] = $lunch2[0];
+  			$lunchable[] = 'LunchItem1' => $lunch2[0];
 
- 			echo $lunchable;
  			echo $lunchable[0];
 		?>
 
