@@ -31,7 +31,7 @@
  			$x = 0;
 
  			while($x < count($lunch2)){
- 				echo $lunch2[$x]."\r\n";
+ 				echo $lunch2[$x]."<br>";
  				$x = $x + 1;
  			}
 		?>
