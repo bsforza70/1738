@@ -24,15 +24,17 @@
 			$lunchpos = strpos($text, "LUNCH");			
  			$lunch = substr($text, $lunchpos);
  			$birthpos = strpos($lunch, "Happy Birthday");
- 			$lunch = substr($lunch, 5, $birthpos);
+ 			$lunch = substr($lunch, 6, $birthpos);
 
  			$lunch2 = explode("│", $lunch);
-  			$x = 0;
- 			while($x < count($lunch2)) {
- 				echo $lunch2[$x];
- 				$x = $x + 1;
- 			}
+  		// 	$x = 0;
+ 			// while($x < count($lunch2)) {
+ 			// 	echo $lunch2[$x];
+ 			// 	$x = $x + 1;
+ 			// }
  			// echo $lunch;
+
+ 			echo json_encode($lunch2);
 		?>
 
 	</body>
