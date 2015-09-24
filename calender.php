@@ -23,8 +23,8 @@
 
 			$lunchpos = strpos($text, "LUNCH");			
  			$lunch = substr($text, $lunchpos);
- 			$birthpos = strpos($lunch, "Happy Birthday";
- 			$lunch = substr($lunch, $birthpos);
+ 			$birthpos = strpos($lunch, "Happy Birthday");
+ 			echo $birthpos;
  			echo $lunch;
 		?>
 
