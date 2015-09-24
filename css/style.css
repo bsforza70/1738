@@ -66,5 +66,9 @@ body {
 @media (max-width: 1013px) {
 	#name, #inout, #submit {
 		width: 80vw;
+		text-align: left;
+	}
+	#inout, #submit {
+		margin-top: 30px;
 	}
 }
