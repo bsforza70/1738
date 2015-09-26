@@ -15,15 +15,104 @@
 		<script type="text/javascript" src="js/particles.js"></script>
 	</head>
 	<body>
-
 		<?php
 			$name = $_POST["name"];
 			$type = $_POST["inout"];
+
+			$mysqli = new mysqli("localhost", "root", "", "robotics");
+
+			if ($type === "in") sign_in($name, $mysqli);
+			else if ($type === "out") sign_out($name, $mysqli);
+
+			// NOTE: Probably want to put the following functions in a separate file.
+			// Not sure how to do that yet, so I'll leave it here for proof of concept.
+
+			/**************************************/
+			// SIGN IN AND OUT
+
+			function sign_in($name, $mysqli) {
+				date_default_timezone_set("America/Chicago");
+				$unix = time();
+
+				$statement = $mysqli->prepare("INSERT INTO temp (name, time_in)
+											VALUES (?, ?)");
+				$statement->bind_param('si', $name, $unix);
+				$statement->execute();
+				echo "successfully signed in";
+			}
+
+			function sign_out($name, $mysqli) {
+				date_default_timezone_set("America/Chicago");
+
+				$statement = $mysqli->prepare("SELECT * FROM temp
+											WHERE name = ?");
+				$statement->bind_param('s', $name);
+				$statement->execute();
+				$result = $statement->get_result();
+				if ($result->num_rows === 0) {
+					echo "you never signed in bro";
+					return;
+				}
+				else {
+					$time_in_seconds = time() - $result->fetch_object()->time_in;
+					echo "successfully logged " . format_time($time_in_seconds);
+					insert($name, format_date(time()), $time_in_seconds, $mysqli);
+					$statement = $mysqli->prepare("DELETE FROM temp
+												WHERE name = ?");
+					$statement->bind_param('s', $name);
+					$statement->execute();
+				}
+			}
+
+			/****************************************/
+			// UTIL
+
+			// $time is in seconds.
+			function format_time($time) {
+				$hours = floor($time / 3600);
+				$mins = floor(($time - ($hours * 3600)) / 60);
+				$secs = floor($time % 60);
+				return ($hours . " hours, " . $mins . " mins, " . $secs . " secs");
+			}
+
+			function format_date($unixTime) {
+				return date("m/d h:i:s a", $unixTime);
+			}
+
+			/***********************************************/
+			// DATABASE
+
+			function insert($name, $date, $time, $mysqli) {
+				$statement = $mysqli->prepare("INSERT INTO log (name, date, time)
+											VALUES (?, ?, ?)");
+				$statement->bind_param('ssi', $name, $date, $time);
+				$statement->execute();
+			}
+
+			function get_total_time($name, $mysqli) {
+				$statement = $mysqli->prepare("SELECT * FROM log
+											WHERE name = ?");
+				$statement->bind_param('s', $name);
+				$statement->execute();
+				$result = $statement->get_result();
+				$total_time = 0;
+				if ($result->num_rows > 0) {
+					while ($row = $result->fetch_object()) {
+						$total_time += $row->time;
+					}
+				}
+				return $total_time;
+			}
+
+			// DO NOT SCREW AROUND WITH THIS:
+			function delete_everything($mysqli) {
+				$mysqli->query("DELETE FROM log");
+			}
 		?>
 
 		<div id="wrap">
 		<div id="container">
-		<form action="http://micdsrobotics.herokuapp.com" method="post">
+		<form action="http://localhost:1337/robotics/1738/index.php" method="post">
 			<select id="name" name="name">
 				<option selected disabled value="Name">name</option>
 				<option value="Amir">Amir</option>
