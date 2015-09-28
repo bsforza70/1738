@@ -23,7 +23,7 @@
 			$name = $_POST["name"];
 			$type = $_POST["inout"];
 
-			$mysqli = new mysqli("localhost", "root", "", "robotics");
+			$mysqli = new mysqli("mysql://b0ff032e0e398e:2d928b7a@us-cdbr-iron-east-03.cleardb.net/heroku_3d5da57e92aa9e3?reconnect=true", "root", "", "robotics");
 
 			if ($type === "in") sign_in($name, $mysqli);
 			else if ($type === "out") sign_out($name, $mysqli);
