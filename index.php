@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<?php
-			error_reporting(0);
+			
 			$name = $_POST["name"];
 			$type = $_POST["inout"];
 
@@ -116,7 +116,7 @@
 
 		<div id="wrap">
 		<div id="container">
-		<form action="http://micdsrobotics.herokuapp.com" method="post">
+		<form action="https://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
 				<option selected disabled value="Name">name</option>
 				<option value="Amir">Amir</option>
