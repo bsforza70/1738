@@ -38,7 +38,7 @@
 											VALUES (?, ?)");
 				$statement->bind_param('si', $name, $unix);
 				$statement->execute();
-				echo "successfully signed in";
+				echo "<script> alert('YASSS'); </script>";
 			}
 
 			function sign_out($name, $mysqli) {
