@@ -116,7 +116,7 @@
 
 		<div id="wrap">
 		<div id="container">
-		<form action="http://localhost:1337/robotics/1738/index.php" method="post">
+		<form action="http://localhost:1337" method="post">
 			<select id="name" name="name">
 				<option selected disabled value="Name">name</option>
 				<option value="Amir">Amir</option>
