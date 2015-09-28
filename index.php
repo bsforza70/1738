@@ -116,7 +116,7 @@
 
 		<div id="wrap">
 		<div id="container">
-		<form action="http://localhost:1337" method="post">
+		<form action="index.php" method="post">
 			<select id="name" name="name">
 				<option selected disabled value="Name">name</option>
 				<option value="Amir">Amir</option>
