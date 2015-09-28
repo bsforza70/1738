@@ -14,7 +14,7 @@
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/particles.js"></script>
 
-		<link href='cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css' rel='stylesheet' type='text/css'>
+		<link href='http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	</head>
 	<body>
