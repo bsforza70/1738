@@ -13,6 +13,9 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/particles.js"></script>
+
+		<link href='cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	</head>
 	<body>
 		<?php
@@ -38,7 +41,7 @@
 											VALUES (?, ?)");
 				$statement->bind_param('si', $name, $unix);
 				$statement->execute();
-				echo "<script> alert('YASSS'); </script>";
+				echo "<script> toastr.success('Alright. You\'re Signed in.') </script>";
 			}
 
 			function sign_out($name, $mysqli) {
@@ -50,12 +53,12 @@
 				$statement->execute();
 				$result = $statement->get_result();
 				if ($result->num_rows === 0) {
-					echo "you never signed in bro";
+					echo "<script> toastr.error('You aren\'t signed in...') </script>";
 					return;
 				}
 				else {
 					$time_in_seconds = time() - $result->fetch_object()->time_in;
-					echo "successfully logged " . format_time($time_in_seconds);
+					echo "<script> toastr.info('You have logged: ') </script>"; . format_time($time_in_seconds);
 					insert($name, format_date(time()), $time_in_seconds, $mysqli);
 					$statement = $mysqli->prepare("DELETE FROM temp
 												WHERE name = ?");
