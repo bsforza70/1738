@@ -19,6 +19,7 @@
 	</head>
 	<body>
 		<?php
+			error_reporting(0);
 			$name = $_POST["name"];
 			$type = $_POST["inout"];
 
