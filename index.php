@@ -59,7 +59,7 @@
 				}
 				else {
 					$time_in_seconds = time() - $result->fetch_object()->time_in;
-					echo "<script> toastr.info('You have logged: ') </script>"; . format_time($time_in_seconds);
+					echo "<script> toastr.info('You have logged: " . format_time($time_in_seconds) . "') </script>";
 					insert($name, format_date(time()), $time_in_seconds, $mysqli);
 					$statement = $mysqli->prepare("DELETE FROM temp
 												WHERE name = ?");
