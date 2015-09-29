@@ -112,8 +112,7 @@
 			}
 
 			function get_leaderboard() {
-				get_total_time("Amir", $mysqli);
-				get_total_time("Ehan", $mysqli);
+				get_total_time("Bob", $mysqli);
 			}
 
 			// DO NOT SCREW AROUND WITH THIS:
