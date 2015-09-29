@@ -112,13 +112,15 @@
 			}
 
 			function get_leaderboard() {
-				
+				echo get_total_time("Bob", $mysqli);
 			}
 
 			// DO NOT SCREW AROUND WITH THIS:
 			function delete_everything($mysqli) {
 				$mysqli->query("DELETE FROM log");
 			} 
+
+			get_leaderboard();
 
 			?>
 
