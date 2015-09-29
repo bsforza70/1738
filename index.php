@@ -116,7 +116,7 @@
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
-					array_push($scores, $names[$itera] => (get_total_time($names[$itera], $mysqli)));
+					array_push($scores, (get_total_time($names[$itera], $mysqli)));
 					echo $scores[$itera];
 					$itera = $itera + 1;
 				}
