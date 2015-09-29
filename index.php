@@ -111,10 +111,17 @@
 				return $total_time;
 			}
 
+			function get_leaderboard() {
+				echo get_total_time("Amir", $mysqli);
+				echo get_total_time("Ehan", $mysqli);
+			}
+
 			// DO NOT SCREW AROUND WITH THIS:
 			function delete_everything($mysqli) {
 				$mysqli->query("DELETE FROM log");
 			} 
+
+			get_leaderboard();
 					?>
 
 		<div id="wrap">
