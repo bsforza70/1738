@@ -120,7 +120,7 @@
 				$mysqli->query("DELETE FROM log");
 			} 
 
-				// echo get_total_time("Bob", $mysqli);
+				echo get_total_time("Bob", $mysqli);
 
 			?>
 
