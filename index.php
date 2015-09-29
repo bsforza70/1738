@@ -9,7 +9,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
-		
+		<script type="text/javascript" src="js/particles.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css' rel='stylesheet' type='text/css'>
@@ -156,6 +156,5 @@
 		</form>
 		</div>
 		</div>
-		<script type="text/javascript" src="js/particles.js"></script>
 	</body>
 </html>
