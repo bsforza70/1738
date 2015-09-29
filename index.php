@@ -112,7 +112,7 @@
 			}
 
 			function get_leaderboard() {
-				echo get_total_time("Bob", $mysqli);
+				
 			}
 
 			// DO NOT SCREW AROUND WITH THIS:
@@ -120,7 +120,7 @@
 				$mysqli->query("DELETE FROM log");
 			} 
 
-			get_leaderboard();
+				// echo get_total_time("Bob", $mysqli);
 
 			?>
 
