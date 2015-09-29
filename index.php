@@ -112,9 +112,7 @@
 			}
 
 			function get_leaderboard() {
-				$names = ["Amir", "August", "Blake", "Bob", "Charlie", "Clayton", "DeRon", "Ehan", "Jackson"
-							"Josh", "Julian", "Justin", "Kendall", "Kristin", "Matt", "Megan", "Michel",
-							"Sophia", "Sophie", "Wilson"];
+				$names = ["Amir", "August", "Blake", "Bob", "Charlie", "Clayton", "DeRon", "Ehan", "Jackson", "Josh", "Julian", "Justin", "Kendall", "Kristin", "Matt", "Megan", "Michel", "Sophia", "Sophie", "Wilson"];
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
