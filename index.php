@@ -99,7 +99,7 @@
 			function get_total_time($name, $mysqli) {
 				$statement = $mysqli->prepare("SELECT * FROM log
 											WHERE name = ?");
-				$statement->bind_param('s', "Bob");
+				$statement->bind_param('s', Bob);
 				$statement->execute();
 				$result = $statement->get_result();
 				$total_time = 0;
