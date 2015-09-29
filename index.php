@@ -43,7 +43,7 @@
 
 				$statement = $mysqli->prepare("INSERT INTO temp (name, time_in)
 											VALUES (?, ?)");
-				$statement->bind_param('si', "TEST", $unix);
+				$statement->bind_param('si', $name, $unix);
 				$statement->execute();
 				echo "<script> toastr.success('Alright. You\'re Signed in.') </script>";
 			}
