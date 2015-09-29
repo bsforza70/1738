@@ -23,7 +23,7 @@
 
 			// $url = parse_url(getenv("mysql://b0ff032e0e398e:2d928b7a@us-cdbr-iron-east-03.cleardb.net/heroku_3d5da57e92aa9e3?reconnect=true"));
 
-			$server = "us-cdbr-iron-east-03.cleardb.net";
+			$server = "http://us-cdbr-iron-east-03.cleardb.net";
 			$username = "b0ff032e0e398e";
 			$password = "2d928b7a";
 			$db = "heroku_3d5da57e92aa9e3";
