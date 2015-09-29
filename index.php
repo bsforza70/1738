@@ -28,98 +28,102 @@
 			$password = $url["pass"];
 			$db = substr($url["path"], 1);
 
-			$mysqli = new mysqli($server, $username, $password, $db);
+			// $mysqli = new mysqli($server, $username, $password, $db);
+			echo $server;
+			echo $username;
+			echo $password;
+			echo $db;
 
-			//$mysqli = new mysqli("@us-cdbr-iron-east-03.cleardb.net", "root", "", "robotics");
+			// //$mysqli = new mysqli("@us-cdbr-iron-east-03.cleardb.net", "root", "", "robotics");
 
-			if ($type === "in") sign_in($name, $mysqli);
-			else if ($type === "out") sign_out($name, $mysqli);
+			// if ($type === "in") sign_in($name, $mysqli);
+			// else if ($type === "out") sign_out($name, $mysqli);
 
-			// NOTE: Probably want to put the following functions in a separate file.
-			// Not sure how to do that yet, so I'll leave it here for proof of concept.
+			// // NOTE: Probably want to put the following functions in a separate file.
+			// // Not sure how to do that yet, so I'll leave it here for proof of concept.
 
-			/**************************************/
-			// SIGN IN AND OUT
+			// /**************************************/
+			// // SIGN IN AND OUT
 
-			function sign_in($name, $mysqli) {
-				date_default_timezone_set("America/Chicago");
-				$unix = time();
+			// function sign_in($name, $mysqli) {
+			// 	date_default_timezone_set("America/Chicago");
+			// 	$unix = time();
 
-				$statement = $mysqli->prepare("INSERT INTO temp (name, time_in)
-											VALUES (?, ?)");
-				$statement->bind_param('si', $name, $unix);
-				$statement->execute();
-				echo "<script> toastr.success('Alright. You\'re Signed in.') </script>";
-			}
+			// 	$statement = $mysqli->prepare("INSERT INTO temp (name, time_in)
+			// 								VALUES (?, ?)");
+			// 	$statement->bind_param('si', $name, $unix);
+			// 	$statement->execute();
+			// 	echo "<script> toastr.success('Alright. You\'re Signed in.') </script>";
+			// }
 
-			function sign_out($name, $mysqli) {
-				date_default_timezone_set("America/Chicago");
+			// function sign_out($name, $mysqli) {
+			// 	date_default_timezone_set("America/Chicago");
 
-				$statement = $mysqli->prepare("SELECT * FROM temp
-											WHERE name = ?");
-				$statement->bind_param('s', $name);
-				$statement->execute();
-				$result = $statement->get_result();
-				if ($result->num_rows === 0) {
-					echo "<script> toastr.error('You aren\'t signed in...') </script>";
-					return;
-				}
-				else {
-					$time_in_seconds = time() - $result->fetch_object()->time_in;
-					echo "<script> toastr.info('You have logged: " . format_time($time_in_seconds) . "') </script>";
-					insert($name, format_date(time()), $time_in_seconds, $mysqli);
-					$statement = $mysqli->prepare("DELETE FROM temp
-												WHERE name = ?");
-					$statement->bind_param('s', $name);
-					$statement->execute();
-				}
-			}
+			// 	$statement = $mysqli->prepare("SELECT * FROM temp
+			// 								WHERE name = ?");
+			// 	$statement->bind_param('s', $name);
+			// 	$statement->execute();
+			// 	$result = $statement->get_result();
+			// 	if ($result->num_rows === 0) {
+			// 		echo "<script> toastr.error('You aren\'t signed in...') </script>";
+			// 		return;
+			// 	}
+			// 	else {
+			// 		$time_in_seconds = time() - $result->fetch_object()->time_in;
+			// 		echo "<script> toastr.info('You have logged: " . format_time($time_in_seconds) . "') </script>";
+			// 		insert($name, format_date(time()), $time_in_seconds, $mysqli);
+			// 		$statement = $mysqli->prepare("DELETE FROM temp
+			// 									WHERE name = ?");
+			// 		$statement->bind_param('s', $name);
+			// 		$statement->execute();
+			// 	}
+			// }
 
-			/****************************************/
-			// UTIL
+			// /****************************************/
+			// // UTIL
 
-			// $time is in seconds.
-			function format_time($time) {
-				$hours = floor($time / 3600);
-				$mins = floor(($time - ($hours * 3600)) / 60);
-				$secs = floor($time % 60);
-				return ($hours . " hours, " . $mins . " mins, " . $secs . " secs");
-			}
+			// // $time is in seconds.
+			// function format_time($time) {
+			// 	$hours = floor($time / 3600);
+			// 	$mins = floor(($time - ($hours * 3600)) / 60);
+			// 	$secs = floor($time % 60);
+			// 	return ($hours . " hours, " . $mins . " mins, " . $secs . " secs");
+			// }
 
-			function format_date($unixTime) {
-				return date("m/d h:i:s a", $unixTime);
-			}
+			// function format_date($unixTime) {
+			// 	return date("m/d h:i:s a", $unixTime);
+			// }
 
-			/***********************************************/
-			// DATABASE
+			// /***********************************************/
+			// // DATABASE
 
-			function insert($name, $date, $time, $mysqli) {
-				$statement = $mysqli->prepare("INSERT INTO log (name, date, time)
-											VALUES (?, ?, ?)");
-				$statement->bind_param('ssi', $name, $date, $time);
-				$statement->execute();
-			}
+			// function insert($name, $date, $time, $mysqli) {
+			// 	$statement = $mysqli->prepare("INSERT INTO log (name, date, time)
+			// 								VALUES (?, ?, ?)");
+			// 	$statement->bind_param('ssi', $name, $date, $time);
+			// 	$statement->execute();
+			// }
 
-			function get_total_time($name, $mysqli) {
-				$statement = $mysqli->prepare("SELECT * FROM log
-											WHERE name = ?");
-				$statement->bind_param('s', $name);
-				$statement->execute();
-				$result = $statement->get_result();
-				$total_time = 0;
-				if ($result->num_rows > 0) {
-					while ($row = $result->fetch_object()) {
-						$total_time += $row->time;
-					}
-				}
-				return $total_time;
-			}
+			// function get_total_time($name, $mysqli) {
+			// 	$statement = $mysqli->prepare("SELECT * FROM log
+			// 								WHERE name = ?");
+			// 	$statement->bind_param('s', $name);
+			// 	$statement->execute();
+			// 	$result = $statement->get_result();
+			// 	$total_time = 0;
+			// 	if ($result->num_rows > 0) {
+			// 		while ($row = $result->fetch_object()) {
+			// 			$total_time += $row->time;
+			// 		}
+			// 	}
+			// 	return $total_time;
+			// }
 
-			// DO NOT SCREW AROUND WITH THIS:
-			function delete_everything($mysqli) {
-				$mysqli->query("DELETE FROM log");
-			}
-		?>
+			// // DO NOT SCREW AROUND WITH THIS:
+			// function delete_everything($mysqli) {
+			// 	$mysqli->query("DELETE FROM log");
+			// } 
+					?>
 
 		<div id="wrap">
 		<div id="container">
