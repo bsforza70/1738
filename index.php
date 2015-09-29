@@ -33,6 +33,7 @@
 			echo $username;
 			echo $password;
 			echo $db;
+			echo "ORANGES FUCKING SUCK";
 
 			// //$mysqli = new mysqli("@us-cdbr-iron-east-03.cleardb.net", "root", "", "robotics");
 
