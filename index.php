@@ -23,7 +23,16 @@
 			$name = $_POST["name"];
 			$type = $_POST["inout"];
 
-			$mysqli = new mysqli("mysql://b0ff032e0e398e:2d928b7a@us-cdbr-iron-east-03.cleardb.net/heroku_3d5da57e92aa9e3?reconnect=true", "root", "", "robotics");
+			$url = parse_url(getenv("mysql://b0ff032e0e398e:2d928b7a@us-cdbr-iron-east-03.cleardb.net/heroku_3d5da57e92aa9e3?reconnect=true"));
+
+			$server = $url["host"];
+			$username = $url["user"];
+			$password = $url["pass"];
+			$db = substr($url["path"], 1);
+
+			$mysqli = new mysqli($server, $username, $password, $db);
+
+			//$mysqli = new mysqli("@us-cdbr-iron-east-03.cleardb.net", "root", "", "robotics");
 
 			if ($type === "in") sign_in($name, $mysqli);
 			else if ($type === "out") sign_out($name, $mysqli);
@@ -116,7 +125,7 @@
 
 		<div id="wrap">
 		<div id="container">
-		<form action="index.php" method="post">
+		<form action="http://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
 				<option selected disabled value="Name">name</option>
 				<option value="Amir">Amir</option>
