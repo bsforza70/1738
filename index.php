@@ -112,7 +112,16 @@
 			}
 
 			function get_leaderboard() {
-				
+				$names = ["Amir", "August", "Blake", "Bob", "Charlie", "Clayton", "DeRon", "Ehan", "Jackson"
+							"Josh", "Julian", "Justin", "Kendall", "Kristin", "Matt", "Megan", "Michel",
+							"Sophia", "Sophie", "Wilson"];
+				$scores = [];
+				$itera = 0;
+				while ($itera < count($names)) {
+					array_push($scores, $names[$itera] => (get_total_time($names[$itera], $mysqli)));
+					echo $scores[$itera];
+					$itera = $itera + 1;
+				}
 			}
 
 			// DO NOT SCREW AROUND WITH THIS:
@@ -120,7 +129,7 @@
 				$mysqli->query("DELETE FROM log");
 			} 
 
-				echo get_total_time("Dez", $mysqli);
+				
 
 			?>
 
