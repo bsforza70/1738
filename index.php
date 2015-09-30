@@ -116,10 +116,10 @@
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
-					array_push($scores, (get_total_time($names[$itera], $mysqli)));
-					echo $scores[$itera];
+					$scores[$names[$itera]] = get_total_time($names[$itera], $mysqli);
 					$itera = $itera + 1;
 				}
+				echo $scores["Bob"];
 			}
 
 			get_leaderboard();
@@ -129,7 +129,7 @@
 				$mysqli->query("DELETE FROM log");
 			} 
 
-				
+			get_leaderboard();	
 
 			?>
 
