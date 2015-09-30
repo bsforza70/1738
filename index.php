@@ -129,6 +129,8 @@
 
 			get_leaderboard();	
 
+			echo get_total_time("Bob", $mysqli);
+
 			?>
 
 		<div id="wrap">
