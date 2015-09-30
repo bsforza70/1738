@@ -134,7 +134,7 @@
 				$mysqli->query("DELETE FROM log");
 			} 
 
-			get_leaderboard($mysqli);	
+			// get_leaderboard($mysqli);	
 			?>
 
 		<div id="wrap">
