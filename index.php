@@ -112,7 +112,7 @@
 			}
 
 			function get_leaderboard($mysqli) {
-				$names = ["Amir", "August", "Blake", "Bob", "Charlie", "Clayton", "DeRon", "Ehan", "Jackson", "Josh", "Julian", "Justin", "Kendall", "Kristin", "Matt", "Megan", "Michel", "Sophia", "Sophie", "Wilson"];
+				$names = ["Amir", "August", "Blake", "Bob", "Charlie", "Clayton", "DeRon", "Ehan", "Jackson", "Josh", "Julian", "Justin", "Kendall", "Kristin", "Matt", "Megan", "Michel", "Niema", "Sidd", "Sophia", "Wilson"];
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
@@ -148,7 +148,7 @@
 				<option value="Bob">Bob</option>
 				<option value="Charlie">Charlie</option>
 				<option value="Clayton">Clayton</option>
-				<option value="DeRon">Deron</option>
+				<option value="DeRon">DeRon</option>
 				<option value="Ehan">Ehan</option>
 				<option value="Jackson">Jackson</option>
 				<option value="Josh">Josh</option>
@@ -159,8 +159,9 @@
 				<option value="Matt">Matt</option>
 				<option value="Megan">Megan</option>
 				<option value="Michel">Michel</option>
+				<option value="Niema">Niema</option>
+				<option value="Sidd">Sidd</option>
 				<option value="Sophia">Sophia</option>
-				<option value="Sophie">Sophie</option>
 				<option value="Wilson">Wilson</option>
 			</select>
 			<select id="inout" name="inout">
