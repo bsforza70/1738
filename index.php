@@ -116,7 +116,7 @@
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
-					$scores[$names[$itera]] =  "is a bitch"; //get_total_time($names[$itera], $mysqli);
+					$scores[$names[$itera]] =  get_total_time($names[$itera], $mysqli); //get_total_time($names[$itera], $mysqli);
 					$itera = $itera + 1;
 				}
 				echo $scores["Bob"];
@@ -128,9 +128,6 @@
 			} 
 
 			get_leaderboard();	
-
-			echo get_total_time("Bob", $mysqli);
-
 			?>
 
 		<div id="wrap">
