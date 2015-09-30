@@ -116,10 +116,10 @@
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
-					$scores[$names[$itera]] = get_total_time($names[$itera], $mysqli);
+					$scores[$names[$itera]] =  "is a bitch"; //get_total_time($names[$itera], $mysqli);
 					$itera = $itera + 1;
 				}
-				// echo $scores["Bob"];
+				echo $scores["Bob"];
 			}
 
 			// DO NOT SCREW AROUND WITH THIS:
