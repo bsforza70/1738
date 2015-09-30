@@ -122,8 +122,6 @@
 				echo $scores["Bob"];
 			}
 
-			get_leaderboard();
-
 			// DO NOT SCREW AROUND WITH THIS:
 			function delete_everything($mysqli) {
 				$mysqli->query("DELETE FROM log");
