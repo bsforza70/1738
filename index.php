@@ -111,15 +111,22 @@
 				return $total_time;
 			}
 
-			function get_leaderboard() {
+			function get_leaderboard($mysqli) {
 				$names = ["Amir", "August", "Blake", "Bob", "Charlie", "Clayton", "DeRon", "Ehan", "Jackson", "Josh", "Julian", "Justin", "Kendall", "Kristin", "Matt", "Megan", "Michel", "Sophia", "Sophie", "Wilson"];
 				$scores = [];
 				$itera = 0;
 				while ($itera < count($names)) {
-					$scores[$names[$itera]] =  get_total_time($names[$itera], $mysqli); //get_total_time($names[$itera], $mysqli);
+					$scores[$names[$itera]] = get_total_time($names[$itera], $mysqli);
 					$itera = $itera + 1;
 				}
-				echo $scores["Bob"];
+				arsort($scores);
+				$itera = 0;
+				foreach ($scores as $key => $val) {
+					if ($itera < 5) {
+					    echo "<li>"."$key $val"."</li>";
+					}
+					$itera = $itera + 1;
+				}
 			}
 
 			// DO NOT SCREW AROUND WITH THIS:
@@ -127,7 +134,7 @@
 				$mysqli->query("DELETE FROM log");
 			} 
 
-			get_leaderboard();	
+			get_leaderboard($mysqli);	
 			?>
 
 		<div id="wrap">
