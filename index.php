@@ -142,6 +142,7 @@
 		<form action="http://micdsrobotics.herokuapp.com" method="post">
 			<select id="name" name="name">
 				<option selected disabled value="Name">name</option>
+				<option value="Allen">Allen</option>
 				<option value="Amir">Amir</option>
 				<option value="August">August</option>
 				<option value="Blake">Blake</option>
